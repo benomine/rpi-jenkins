@@ -1,4 +1,4 @@
-version: "2"
+version: 3.8
 
 services:
   jenkins:
@@ -6,6 +6,7 @@ services:
     build: . 
     ports:
       - 8080:8080
+      - 50000:50000
     volumes:
       - /mnt/archive/jenkins:/usr/local/jenkins
       - /var/run/docker.sock:/var/run/docker.sock
