@@ -23,7 +23,7 @@ jobs:
           --platform linux/arm/v7 \
           --output "type=docker,push=false" \
           --file ./Dockerfile . \
-          -t benomine/rpi-jenkins
+          -t benjaminnomine/rpi-jenkins
     - name: List images
       run: docker images list
     - name: Docker registry login
@@ -32,4 +32,4 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker push benomine/rpi-jenkins:latest
+        docker push benjaminnomine/rpi-jenkins:latest
